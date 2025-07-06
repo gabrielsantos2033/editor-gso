@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editor GSO – Estilo Photopea</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.css" />
+  <script src="https://uicdn.toast.com/tui-color-picker/latest/tui-color-picker.js"></script>
+  <script src="https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.js"></script>
+</head>
+<body>
+  <div id="tui-image-editor-container"></div>
+
+  <script>
+    const editor = new tui.ImageEditor('#tui-image-editor-container', {
+      includeUI: {
+        loadImage: {
+          path: '',
+          name: 'Editor GSO'
+        },
+        theme: 'black',
+        initMenu: 'filter',
+        menuBarPosition: 'top'
+      },
+      cssMaxWidth: 1000,
+      cssMaxHeight: 700,
+      selectionStyle: {
+        cornerSize: 20,
+        rotatingPointOffset: 70
+      }
+    });
+  </script>
+</body>
+</html>
